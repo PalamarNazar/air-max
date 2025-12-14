@@ -1,0 +1,11 @@
+@use "../helpers" as *;
+
+.button {
+    display: flex;
+    background-color: transparent;
+    border: var(--button-border);
+    padding: fluid(13, 4) fluid(20, 8) ;
+    color: var(--color-dark-gray);
+    font-size: rem(15);
+    white-space: nowrap;
+}

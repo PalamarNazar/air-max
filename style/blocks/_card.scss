@@ -1,0 +1,36 @@
+@use "../helpers" as *;
+
+.card {
+    color: var(--color-dark);
+    overflow: hidden;
+
+    &__content {
+        display: grid;
+        row-gap: fluid(15, 8);
+    }
+    &__image {
+        background-color: var(--color-light-gray);
+    }
+
+    &__info {
+        display: grid;
+        row-gap: fluid(6, 3);
+    }
+
+    &__title {
+        white-space: nowrap;
+    }
+
+    &__brand {
+        @include fluid-text(22, 14);
+        color: var(--color-gray);
+    }
+
+    &__price {
+        @include fluid-text(20, 12);
+    }
+
+    &__size {
+        color: var(--color-red);
+    }
+}

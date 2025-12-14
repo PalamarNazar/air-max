@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./style/main.css">
+  <script type="module" src="./js/main.js" defer></script>
+  <title>Air Max || Home</title>
+</head>
+<body>
+  <header class="header" data-js-header>
+    <div class="header__inner container">
+      <button type="button" class="burger-menu" aria-label="Menu" title="Menu" data-js-burger>
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+      </button>
+      <nav class="header__nav" aria-label="categories">
+        <ul class="header__list overlay list" data-js-overlay>
+          <li class="list__item">
+            <a href="/" class="list__link is-active">ALL</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="list__link">FOOTWEAR</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="list__link">APPAREL</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="list__link">BASKETBALL</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="list__link">SLIDES</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__search">
+        <span class="header__icon-search">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.88997 18.06C14.4021 18.06 18.06 14.4022 18.06 9.89C18.06 5.37784 14.4021 1.72 9.88997 1.72C5.3778 1.72 1.71997 5.37784 1.71997 9.89C1.71997 14.4022 5.3778 18.06 9.88997 18.06Z" stroke="black" stroke-width="1.29" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M18.92 18.92L17.2 17.2" stroke="black" stroke-width="1.29" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>  
+        <span>Search</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1 class="visually-hidden">AIR MAX</h1>
+      <div class="hero__main container">
+        <img src="./Images/sneakers_logo.png" 
+        alt="sneakers logo" 
+        class="hero__image"
+        width="733" height="767"
+        >
+        <a href="/" class="hero__button button-buy">BUY NOW</a>
+      </div>
+    </section>
+
+    <section class="section section-slider" data-js-slider-section>
+      <header class="section__header container">
+        <h2 class="section__title">Top Sellers</h2>
+        <div class="section__controls">
+          <button type="button" class="section__filters button">
+            <span class="icon icon--filters">FILTERS</span>
+          </button>
+          <button type="button" class="section__sort button">
+            <span class="icon icon--sort">SORT BY</span>
+          </button>
+          <ul class="section__view-toggle view-controls" aria-label="view-controls">
+            <li class="view-controls__item">
+              <button type="button" class="view-controls__button" aria-label="view-list">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.57019 6.28076C0.701352 6.28076 0 6.98211 0 7.85095C0 8.71979 0.701352 9.42114 1.57019 9.42114C2.43903 9.42114 3.14038 8.71979 3.14038 7.85095C3.14038 6.98211 2.43903 6.28076 1.57019 6.28076ZM1.57019 0C0.701352 0 0 0.701352 0 1.57019C0 2.43903 0.701352 3.14038 1.57019 3.14038C2.43903 3.14038 3.14038 2.43903 3.14038 1.57019C3.14038 0.701352 2.43903 0 1.57019 0ZM1.57019 12.5615C0.701352 12.5615 0 13.2733 0 14.1317C0 14.9901 0.711819 15.7019 1.57019 15.7019C2.42856 15.7019 3.14038 14.9901 3.14038 14.1317C3.14038 13.2733 2.43903 12.5615 1.57019 12.5615ZM4.71057 15.1785H19.3657V13.0849H4.71057V15.1785ZM4.71057 8.89774H19.3657V6.80416H4.71057V8.89774ZM4.71057 0.523397V2.61698H19.3657V0.523397H4.71057Z" fill="#808080" />
+                </svg>
+              </button>
+            </li>
+            <li class="view-controls__item">
+              <button type="button" class="view-controls__button" aria-label="view-quote">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V8.37435H8.37435V0H0ZM6.28076 6.28076H2.09359V2.09359H6.28076V6.28076ZM0 10.4679V18.8423H8.37435V10.4679H0ZM6.28076 16.7487H2.09359V12.5615H6.28076V16.7487ZM10.4679 0V8.37435H18.8423V0H10.4679ZM16.7487 6.28076H12.5615V2.09359H16.7487V6.28076ZM10.4679 10.4679V18.8423H18.8423V10.4679H10.4679ZM16.7487 16.7487H12.5615V12.5615H16.7487V16.7487Z" fill="#040404" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div 
+      class="section__body sellers-slider container" 
+      role="region" aria-roledescription="slider" aria-label="Products galery">
+        <button type="button" 
+        class="sellers-slider__arrow slider-arrows slider-arrows__previews" 
+        aria-label="button-previews" data-js-arrow-prev>
+          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
+          </svg>
+        </button>
+        <button type="button"
+        class="sellers-slider__arrow slider-arrows slider-arrows__next" 
+        aria-label="button-next" data-js-arrow-next>
+          <svg width="58" height="58" style="rotate: 180deg;" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
+          </svg>
+        </button>
+        <ul 
+          class="section__list"
+          aria-live="polite"
+          aria-label="Products list" 
+          data-js-slider
+        >
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/orange-sneackers.png" 
+              alt="Orange sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 Orche</h3>
+                <p class="card__price">₹9,985</p>
+                <p class="card__size">Sizes: 8 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/green-sneackers.png" 
+              alt="Green sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force Panda</h3>
+                <p class="card__price">₹19,655</p>
+                <p class="card__size">Sizes: 6 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/blue-sneakers.png" 
+              alt="Blue sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 ‘07</h3>
+                <p class="card__price">₹15,750</p>
+                <p class="card__size">Sizes: 9-12</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/black-sneackers.png" 
+              alt="Black Balance sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">New Balance</p>
+                <h3 class="card__title">327’ Munsell White</h3>
+                <p class="card__price">₹11,999</p>
+                <p class="card__size">Sizes: 7-11</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/orange-sneackers.png" 
+              alt="Orange sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 Orche</h3>
+                <p class="card__price">₹9,985</p>
+                <p class="card__size">Sizes: 8 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/green-sneackers.png" 
+              alt="Green sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force Panda</h3>
+                <p class="card__price">₹19,655</p>
+                <p class="card__size">Sizes: 6 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/blue-sneakers.png" 
+              alt="Blue sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 ‘07</h3>
+                <p class="card__price">₹15,750</p>
+                <p class="card__size">Sizes: 9-12</p>
+              </div>
+            </article>
+          </li>
+          <li class="sellers-slider__card card" data-js-slider-item>
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/black-sneackers.png" 
+              alt="Black Balance sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">New Balance</p>
+                <h3 class="card__title">327’ Munsell White</h3>
+                <p class="card__price">₹11,999</p>
+                <p class="card__size">Sizes: 7-11</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <button class="section__button button-buy">SEE ALL</button>
+    </section>
+
+    <section class="perfomants">
+      <h2 class="visually-hidden">Perfomants footwear brands</h2>
+      <div class="perfomants__inner container">
+        <h3 class="perfomants__title">
+          Not
+          <span class="perfomants__title-block">
+          </span>
+          Just for
+          <span class="perfomants__title-block">
+          </span><br>
+          Street Anymore
+          <span class="perfomants__title-block">
+          </span>
+        </h3>
+        <ul class="perfomants__brands-list" aria-label="Perfomants brands list">
+          <li class="perfomants__item">
+            <img src="./Images/perfomentses/brands/nike.png" alt="Nike"
+            class="perfomants__image"
+            width="170" height="60" loading="lazy"
+            >
+          </li>
+          <li class="perfomants__item">
+            <img src="./Images/perfomentses/brands/adidas.png" alt="adidas"
+            class="perfomants__image"
+            width="170" height="96" loading="lazy"
+            >
+          </li>
+          <li class="perfomants__item">
+            <img src="./Images/perfomentses/brands/vans.png" alt="Vans"
+            class="perfomants__image"
+            width="170" height="90" loading="lazy"
+            >
+          </li>
+          <li class="perfomants__item">
+            <img src="./Images/perfomentses/brands/nbalance.png" alt="New-balance"
+            class="perfomants__image"
+            width="170" height="96" loading="lazy"
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="just">
+      <div class="just__inner no-padding__container">
+        <div class="just__nav animation-banner">
+          <img src="./Images/naike-bar.png" alt="" class="animation-banner__image" loading="lazy">
+          <img src="./Images/naike-bar.png" alt="" class="animation-banner__image" loading="lazy">
+        </div>
+
+        <div class="just__main">
+          <img src="./Images/just__banner.jpg" alt="Style Banner" class="just__banner"
+          loading="lazy"
+          >
+          <img src="./Images/white-nike__logo.png" alt="" class="just__logo"
+          loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section section__gallery">
+      <header class="section__header container">
+        <h2 class="section__title">Top Sellers</h2>
+        <div class="section__controls">
+          <button type="button" class="section__filters button">
+            <span class="icon icon--filters">FILTERS</span>
+          </button>
+          <button type="button" class="section__sort button">
+            <span class="icon icon--sort">SORT BY</span>
+          </button>
+          <ul class="section__view-toggle view-controls">
+            <li class="view-controls__item">
+              <button type="button" class="view-controls__button" aria-label="view-list">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.57019 6.28076C0.701352 6.28076 0 6.98211 0 7.85095C0 8.71979 0.701352 9.42114 1.57019 9.42114C2.43903 9.42114 3.14038 8.71979 3.14038 7.85095C3.14038 6.98211 2.43903 6.28076 1.57019 6.28076ZM1.57019 0C0.701352 0 0 0.701352 0 1.57019C0 2.43903 0.701352 3.14038 1.57019 3.14038C2.43903 3.14038 3.14038 2.43903 3.14038 1.57019C3.14038 0.701352 2.43903 0 1.57019 0ZM1.57019 12.5615C0.701352 12.5615 0 13.2733 0 14.1317C0 14.9901 0.711819 15.7019 1.57019 15.7019C2.42856 15.7019 3.14038 14.9901 3.14038 14.1317C3.14038 13.2733 2.43903 12.5615 1.57019 12.5615ZM4.71057 15.1785H19.3657V13.0849H4.71057V15.1785ZM4.71057 8.89774H19.3657V6.80416H4.71057V8.89774ZM4.71057 0.523397V2.61698H19.3657V0.523397H4.71057Z" fill="#808080" />
+                </svg>
+              </button>
+            </li>
+            <li class="view-controls__item">
+              <button type="button" class="view-controls__button" aria-label="view-quote">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V8.37435H8.37435V0H0ZM6.28076 6.28076H2.09359V2.09359H6.28076V6.28076ZM0 10.4679V18.8423H8.37435V10.4679H0ZM6.28076 16.7487H2.09359V12.5615H6.28076V16.7487ZM10.4679 0V8.37435H18.8423V0H10.4679ZM16.7487 6.28076H12.5615V2.09359H16.7487V6.28076ZM10.4679 10.4679V18.8423H18.8423V10.4679H10.4679ZM16.7487 16.7487H12.5615V12.5615H16.7487V16.7487Z" fill="#040404" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="section__body container" aria-label="Products galery">
+        <ul 
+          class="section__list gallery__list"
+          aria-label="Products list"
+        >
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/orange-sneackers.png" 
+              alt="Orange sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 Orche</h3>
+                <p class="card__price">₹9,985</p>
+                <p class="card__size">Sizes: 8 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/green-sneackers.png" 
+              alt="Green sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force Panda</h3>
+                <p class="card__price">₹19,655</p>
+                <p class="card__size">Sizes: 6 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/blue-sneakers.png" 
+              alt="Blue sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 ‘07</h3>
+                <p class="card__price">₹15,750</p>
+                <p class="card__size">Sizes: 9-12</p>
+              </div>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/orange-sneackers.png" 
+              alt="Orange sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 Orche</h3>
+                <p class="card__price">₹9,985</p>
+                <p class="card__size">Sizes: 8 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/green-sneackers.png" 
+              alt="Green sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force Panda</h3>
+                <p class="card__price">₹19,655</p>
+                <p class="card__size">Sizes: 6 -10</p>
+              </div>
+            </article>
+          </li>
+          <li class="card">
+            <article class="card__content">
+              <img
+              class="card__image"
+              src="./Images/sneakers_products/blue-sneakers.png" 
+              alt="Blue sneakers"
+              width="401" height="376" loading="lazy" 
+              >
+              <div class="card__info">
+                <p class="card__brand">Nike</p>
+                <h3 class="card__title">Air Force 1 ‘07</h3>
+                <p class="card__price">₹15,750</p>
+                <p class="card__size">Sizes: 9-12</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <button class="section__button button-buy">SEE ALL</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2 class="visually-hidden">Footer section</h2>
+    <div class="footer__body container">
+      <div class="footer__main">
+        <div class="footer__column">
+          <p class="footer__column-title h4" id="footer-company">Company</p>
+          <ul class="footer__list" aria-labelledby="footer-company">
+            <li class="footer__list-item">
+              <a href="/" class="footer__link list__link">About</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="/" class="footer__link list__link">Careers</a>
+            </li>
+            <li class="footer__list-item">
+              <a href="/" class="footer__link list__link">Mobile</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title h4" id="footer-contacts">Contact</p>
+          <ul class="footer__list list" aria-labelledby="footer-contacts">
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Help/FAQ</a>
+            </li>
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Press</a>
+            </li>
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Affilates</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title h4" id="footer-more">More</p>
+          <ul class="footer__list list" aria-labelledby="footer-more">
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Airlinefees</a>
+            </li>
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Airline</a>
+            </li>
+            <li class="footer__list-item list-item">
+              <a href="/" class="footer__link list__link">Low fare tips</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

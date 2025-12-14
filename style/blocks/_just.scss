@@ -1,0 +1,33 @@
+@use "../helpers" as *;
+
+.just {
+    position: relative;
+    
+    &__inner {
+        overflow: hidden;
+    }
+    
+    &__main {
+        height: fit-content;
+        position: relative;
+    }
+
+    &__banner {
+        filter: blur(rem(4.5));
+    }
+
+    &__logo {
+        @include abs-center;
+        width: fluid(508, 120);
+    }
+
+    &::before {
+        content: "AIR MAX";
+        @include abs-center;
+        display: block;
+        @include fluid-text(382, 85);
+        color: var(--color-opacity);
+        white-space: nowrap;
+        z-index: 1;
+    }
+}

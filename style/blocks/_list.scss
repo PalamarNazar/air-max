@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.list {
+
+    &__link {
+
+        &.is-active {
+            font-weight: 800;
+            pointer-events: none;
+        }
+    }
+}

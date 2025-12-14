@@ -1,0 +1,34 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/list';
+@use 'blocks/burger';
+
+@use 'blocks/hero';
+@use 'blocks/button-buy';
+
+@use 'blocks/card';
+@use 'blocks/section';
+@use 'blocks/view-controls';
+@use 'blocks/sellers-slider';
+@use 'blocks/slider-arrows';
+@use 'blocks/button';
+@use 'blocks/icon';
+
+@use 'blocks/perfomants';
+
+@use 'blocks/animation-banner';
+@use 'blocks/just';
+
+
+@use 'blocks/footer';
+
+.hero,
+.section-slider {
+    display: none;
+
+}

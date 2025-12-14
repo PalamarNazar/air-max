@@ -1,0 +1,18 @@
+@use "../helpers" as *;
+
+.animation-banner {
+
+    display: flex;
+    animation: nikeBar 20s infinite linear;
+    width: 100%;
+    column-gap: rem(10);
+    
+    @keyframes nikeBar {
+        from {
+            transform: translateX(0%)
+        }
+        to {
+            transform: translateX(-100%)
+        }
+    }
+}

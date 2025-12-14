@@ -1,0 +1,41 @@
+@use "../helpers" as *;
+
+.slider-arrows {
+    --arrowSize: #{rem(58)};
+    --arrowPointerSize: #{calc(var(--container-padding-x) + #{rem(58)} - 1em)};
+
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    width: var(--arrowPointerSize);
+    z-index: 40;
+
+    @include hover {
+        color: var(--color-red);
+    }
+
+    &__previews {
+        left: 0;
+        justify-content: end;
+
+        &:disabled {
+            color: var(--color-dark);
+        }
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    & svg {
+        width: var(--arrowSize);
+    }
+
+    @include mobile {
+        width: calc(var(--arrowPointerSize) - 1.5em);
+        --arrowSize: #{rem(42)};
+    }
+}

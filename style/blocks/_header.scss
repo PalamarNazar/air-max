@@ -1,0 +1,83 @@
+@use "../helpers" as *;
+
+.header {        
+    position: sticky;    
+    z-index: 90;
+    top: 0;
+    background-color: var(--color-white);
+    animation-name: scroll-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(50) rem(100);
+    padding-block: fluid(30, 20);
+    
+    @keyframes scroll-header {
+        to {
+            box-shadow: 0 0 rem(30) rem(10) var(--color-gray);
+        }
+        
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr auto; 
+        align-items: center;
+        column-gap: rem(30);
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr auto;
+            column-gap: rem(15);
+        }
+
+        @include mobile-s-above {
+            justify-content: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        font-size: rem(14);
+        column-gap: fluid(41, 16);
+
+        @include mobile {
+            flex-direction: column;
+            @include hide;
+            translate: -100%;
+
+            &.is-active {
+                @include show;
+                translate: 0;
+            }
+        }
+    }
+
+    .overlay {
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            @include flex-center;
+            text-align: center;
+            row-gap: rem(10);
+            background-color: var(--color-red);
+            transition-duration: var(--transition-duration);
+            color: var(--color-white);
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        column-gap: fluid(10, 4);
+    }
+    &__icon-search {
+        --sizeIconSearch: #{fluid(21, 15)};
+
+        @include flex-center;
+
+
+        @include square(var(--sizeIconSearch));
+    }
+
+}

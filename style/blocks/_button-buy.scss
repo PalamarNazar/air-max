@@ -1,0 +1,12 @@
+@use "../helpers" as *;
+
+.button-buy {
+    padding: fluid(6, 2) fluid(24, 8);
+    white-space: nowrap;
+    background-color: transparent;
+
+    @include hover {
+        border-color: var(--color-dark);
+        color: var(--color-dark);
+    }
+}

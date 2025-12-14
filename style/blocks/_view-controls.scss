@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+.view-controls {
+    display: flex;
+    border: var(--button-border);
+    padding-inline: fluid(20, 14);
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &:not(:last-child) {
+            padding-right: fluid(13, 6);
+            border-right: var(--button-border);
+        }
+        &:not(:first-child) {
+            padding-left: fluid(13, 6);
+        }
+    }
+    
+    &__button {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        
+        width: fluid(19, 15);
+    }
+}

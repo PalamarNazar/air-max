@@ -1,0 +1,29 @@
+@use "../helpers" as *;
+
+.footer {
+    background-color: var(--color-light-gray);
+    
+    &__main {
+        display: flex;
+        column-gap: fluid(130, 40);
+        padding: fluid(108, 72) 0 fluid(112, 76);
+        
+        @include mobile-s-above {
+            justify-content: flex-end;
+        }
+    }
+
+    &__column {
+        display: grid;
+        row-gap: fluid(45, 15);
+    }
+
+    &__list {
+        display: grid;
+        row-gap: fluid(17, 8);
+    }
+
+    &__link {
+        color: var(--color-red);
+    }
+}

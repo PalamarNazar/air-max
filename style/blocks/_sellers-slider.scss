@@ -1,22 +1,22 @@
 @use "../helpers" as *;
 
 .sellers-slider {
+    --slideGap: #{fluid(26, 10)};
     position: relative;
-    --slideGap: #{fluid(40, 15)};
     overflow: hidden;
 
     & .section__list {
         display: flex;
         column-gap: var(--slideGap);
         transition-duration: var(--transition-duration);
-
-    
     }
     &__card {
-        flex: 0 0 calc(24.5% - (var(--slideGap) / 2));
+        @include laptop-above {
+            flex: 0 0 23.75%;
+        }
 
-        @include tablet {
-            flex: 0 0 calc(33.33% - (var(--slideGap) / 2));
+        @include laptop {
+            flex: 0 0 32.5%;
         }
 
         @include mobile {

@@ -11,13 +11,12 @@ body {
 
     display: flex;
     flex-direction: column;
-    font-family: 'MonumentExtended';
+    font-family: var(--font-family-base);
     letter-spacing: 0.07em;
 }
 
 .main {
     padding-bottom: fluid(347, 148);
-    // overflow-x: hidden;
 }
 
 main {

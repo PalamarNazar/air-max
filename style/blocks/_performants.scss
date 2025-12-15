@@ -1,6 +1,6 @@
 @use "../helpers" as *;
 
-.perfomants {
+.performants {
 
     &__inner {
         display: grid;
@@ -12,13 +12,13 @@
     }
 
     &__title {
-        @include fluid-text(105, 42);
+        @include fluid-text(87, 40);
         justify-self: center;
         text-align: center;
         text-transform: capitalize;
-        
-        @include mobile {
-            max-width: 55%;
+
+        @include tablet {
+            max-width: 80%;
             line-height: 1.6;
         }
 
@@ -38,7 +38,7 @@
                     position: absolute;
                     inset: rem(-7) 0 0 0;
                     scale: 3.5;
-                    background: url(../../Images/perfomentses/white-sneakers.png) center / contain no-repeat;
+                    background: url(../Images/performantses/white-sneakers.png) center / contain no-repeat;
 
                 }
             }
@@ -52,7 +52,7 @@
                     inset: 0;
                     scale: 3.5;
                     transform: translate(10%, -23%);
-                    background: url(../../Images/perfomentses/orange-sneakers.png) center / contain no-repeat;
+                    background: url(../Images/performantses/orange-sneakers.png) center / contain no-repeat;
 
                 }
             }
@@ -65,7 +65,7 @@
                     position: absolute;
                     inset: 0;
                     scale: 2;
-                    background: url(../../Images/perfomentses/small-sneakers.png) center / contain no-repeat;
+                    background: url(../Images/performantses/small-sneakers.png) center / contain no-repeat;
 
                 }
             }

@@ -16,17 +16,17 @@ class HeaderMenu {
         this.overlayMenu = this.headerMenu.querySelector(this.selectors.overlay);
         this.bindEvents();
     }
+    
+    onBurger = () => {
+        this.burgerButton.classList.toggle(this.stateClasses.isActive);
+        this.overlayMenu.classList.toggle(this.stateClasses.isActive);
+        document.querySelector('html').classList.toggle(this.stateClasses.isLock)
+    };
 
     bindEvents() {
         this.burgerButton.addEventListener('click', this.onBurger)
     }
 
-    onBurger = () => {
-        console.log(this.burgerButton)
-        this.burgerButton.classList.toggle(this.stateClasses.isActive);
-        this.overlayMenu.classList.toggle(this.stateClasses.isActive);
-        document.querySelector('html').classList.toggle(this.stateClasses.isLock)
-    };
 }
 
 export default HeaderMenu;

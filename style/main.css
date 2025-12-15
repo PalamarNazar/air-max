@@ -120,16 +120,16 @@ svg * {
   }
 }
 @font-face {
-  font-family: "MonumentExtended";
-  src: url("../fonts/MonumentExtended-Ultrabold.woff2") format("woff2");
-  font-weight: 800;
+  font-family: "Monument Extended";
+  src: url("../fonts/MonumentExtended-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "MonumentExtended";
-  src: url("../fonts/MonumentExtended-Regular.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Monument Extended";
+  src: url("../fonts/MonumentExtended-Ultrabold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -200,7 +200,7 @@ body {
   font-size: clamp(0.75rem, 0.6291322314rem + 0.4958677686vw, 1.125rem);
   display: flex;
   flex-direction: column;
-  font-family: "MonumentExtended";
+  font-family: var(--font-family-base);
   letter-spacing: 0.07em;
 }
 
@@ -296,19 +296,19 @@ a[class] {
 }
 .header__inner {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   column-gap: 1.875rem;
 }
 @media (width <= 47.99875rem) {
   .header__inner {
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: auto 1fr auto;
     column-gap: 0.9375rem;
   }
 }
-@media (width > 30.06125rem) {
-  .header__inner {
-    justify-content: center;
+@media (width <= 47.99875rem) {
+  .header__left-column {
+    display: none;
   }
 }
 .header__list {
@@ -347,6 +347,7 @@ a[class] {
 .header__search {
   display: flex;
   align-items: center;
+  justify-content: end;
   background-color: transparent;
   border: none;
   column-gap: clamp(0.25rem, 0.1291322314rem + 0.4958677686vw, 0.625rem);
@@ -426,7 +427,8 @@ a[class] {
   left: 50%;
   translate: -50% -50%;
   z-index: 0;
-  font-size: clamp(5.3125rem, -0.6704545455rem + 24.5454545455vw, 23.875rem);
+  font-size: clamp(4.75rem, -0.729338843rem + 22.479338843vw, 21.75rem);
+  letter-spacing: -0.07em;
   white-space: nowrap;
   color: var(--color-opacity);
 }
@@ -435,6 +437,7 @@ a[class] {
   grid-template-columns: 50% 25%;
   justify-content: end;
   align-items: end;
+  position: relative;
   padding-block: clamp(0.625rem, 0.423553719rem + 0.826446281vw, 1.25rem) clamp(2.125rem, 1.5609504132rem + 2.3140495868vw, 3.875rem);
 }
 @media (width <= 30.06125rem) {
@@ -445,6 +448,17 @@ a[class] {
 }
 .hero__main * {
   z-index: 5;
+}
+.hero__main::before {
+  --frameWidth: clamp(10.625rem, 3.2117768595rem + 30.4132231405vw, 33.625rem);
+  --frameHeight: clamp(9.875rem, 2.6027892562rem + 29.8347107438vw, 32.4375rem);
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: var(--frameWidth);
+  height: var(--frameHeight);
+  background: url(../Images/Frame-hero.svg) center/contain no-repeat;
 }
 .hero__button {
   justify-self: center;
@@ -471,21 +485,29 @@ a[class] {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   color: var(--color-dark);
   overflow: hidden;
 }
 .card__content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: clamp(0.5rem, 0.3589876033rem + 0.5785123967vw, 0.9375rem);
 }
 .card__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
   background-color: var(--color-light-gray);
 }
 .card__info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: clamp(0.1875rem, 0.1270661157rem + 0.2479338843vw, 0.375rem);
 }
 .card__title {
+  font-size: clamp(0.875rem, 0.7339876033rem + 0.5785123967vw, 1.3125rem);
   white-space: nowrap;
 }
 .card__brand {
@@ -587,8 +609,8 @@ a[class] {
 }
 
 .sellers-slider {
+  --slideGap: clamp(0.625rem, 0.3026859504rem + 1.3223140496vw, 1.625rem);
   position: relative;
-  --slideGap: clamp(0.9375rem, 0.4338842975rem + 2.0661157025vw, 2.5rem);
   overflow: hidden;
 }
 .sellers-slider .section__list {
@@ -596,12 +618,14 @@ a[class] {
   column-gap: var(--slideGap);
   transition-duration: var(--transition-duration);
 }
-.sellers-slider__card {
-  flex: 0 0 calc(24.5% - var(--slideGap) / 2);
-}
-@media (width <= 63.99875rem) {
+@media (width > 90.06125rem) {
   .sellers-slider__card {
-    flex: 0 0 calc(33.33% - var(--slideGap) / 2);
+    flex: 0 0 23.75%;
+  }
+}
+@media (width <= 90.06125rem) {
+  .sellers-slider__card {
+    flex: 0 0 32.5%;
   }
 }
 @media (width <= 47.99875rem) {
@@ -687,7 +711,7 @@ a[class] {
   height: clamp(1rem, 0.798553719rem + 0.826446281vw, 1.625rem);
 }
 
-.perfomants__inner {
+.performants__inner {
   display: grid;
   row-gap: clamp(3.5rem, 2.7747933884rem + 2.9752066116vw, 5.75rem);
   justify-content: center;
@@ -695,64 +719,64 @@ a[class] {
   padding-block: clamp(2.25rem, 1.4240702479rem + 3.3884297521vw, 4.8125rem) clamp(4.875rem, 3.0821280992rem + 7.3553719008vw, 10.4375rem);
   overflow: hidden;
 }
-.perfomants__title {
-  font-size: clamp(2.625rem, 1.3558884298rem + 5.2066115702vw, 6.5625rem);
+.performants__title {
+  font-size: clamp(2.5rem, 1.5532024793rem + 3.8842975207vw, 5.4375rem);
   justify-self: center;
   text-align: center;
   text-transform: capitalize;
 }
-@media (width <= 47.99875rem) {
-  .perfomants__title {
-    max-width: 55%;
+@media (width <= 63.99875rem) {
+  .performants__title {
+    max-width: 80%;
     line-height: 1.6;
   }
 }
-.perfomants__title-block {
+.performants__title-block {
   position: relative;
   display: inline-block;
   height: 0.7em;
   line-height: 0;
   border-radius: clamp(2rem, 1.798553719rem + 0.826446281vw, 2.625rem);
 }
-.perfomants__title-block:first-child {
+.performants__title-block:first-child {
   width: 1.5em;
   background: #000;
 }
-.perfomants__title-block:first-child::before {
+.performants__title-block:first-child::before {
   content: "";
   position: absolute;
   inset: -0.4375rem 0 0 0;
   scale: 3.5;
-  background: url(../../Images/perfomentses/white-sneakers.png) center/contain no-repeat;
+  background: url(../Images/performantses/white-sneakers.png) center/contain no-repeat;
 }
-.perfomants__title-block:nth-child(2) {
+.performants__title-block:nth-child(2) {
   width: 2em;
   background: var(--color-yellow);
 }
-.perfomants__title-block:nth-child(2)::before {
+.performants__title-block:nth-child(2)::before {
   content: "";
   position: absolute;
   inset: 0;
   scale: 3.5;
   transform: translate(10%, -23%);
-  background: url(../../Images/perfomentses/orange-sneakers.png) center/contain no-repeat;
+  background: url(../Images/performantses/orange-sneakers.png) center/contain no-repeat;
 }
-.perfomants__title-block:last-child {
+.performants__title-block:last-child {
   width: 1.3em;
   background: #000;
 }
-.perfomants__title-block:last-child::before {
+.performants__title-block:last-child::before {
   content: "";
   position: absolute;
   inset: 0;
   scale: 2;
-  background: url(../../Images/perfomentses/small-sneakers.png) center/contain no-repeat;
+  background: url(../Images/performantses/small-sneakers.png) center/contain no-repeat;
 }
-.perfomants__title-image {
+.performants__title-image {
   display: inline-flex;
   vertical-align: middle;
 }
-.perfomants__brands-list {
+.performants__brands-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -776,6 +800,7 @@ a[class] {
 
 .just {
   position: relative;
+  overflow-x: hidden;
 }
 .just__inner {
   overflow: hidden;
@@ -792,7 +817,7 @@ a[class] {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  width: clamp(7.5rem, -0.3161157025rem + 32.0661157025vw, 31.75rem);
+  width: clamp(7.5rem, -0.5175619835rem + 32.8925619835vw, 32.375rem);
 }
 .just::before {
   content: "AIR MAX";
@@ -801,7 +826,8 @@ a[class] {
   left: 50%;
   translate: -50% -50%;
   display: block;
-  font-size: clamp(5.3125rem, -0.6704545455rem + 24.5454545455vw, 23.875rem);
+  font-size: clamp(4.75rem, -0.729338843rem + 22.479338843vw, 21.75rem);
+  letter-spacing: -0.07em;
   color: var(--color-opacity);
   white-space: nowrap;
   z-index: 1;
@@ -830,11 +856,6 @@ a[class] {
 }
 .footer__link {
   color: var(--color-red);
-}
-
-.hero,
-.section-slider {
-  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,7 @@
 
 .just {
     position: relative;
+    overflow-x: hidden;
     
     &__inner {
         overflow: hidden;
@@ -18,14 +19,15 @@
 
     &__logo {
         @include abs-center;
-        width: fluid(508, 120);
+        width: fluid(518, 120);
     }
 
     &::before {
         content: "AIR MAX";
         @include abs-center;
         display: block;
-        @include fluid-text(382, 85);
+        @include fluid-text(348, 76);
+        letter-spacing: -0.07em;
         color: var(--color-opacity);
         white-space: nowrap;
         z-index: 1;

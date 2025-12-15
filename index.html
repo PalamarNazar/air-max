@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="Air Max site home page">
   <link rel="stylesheet" href="./style/main.css">
   <script type="module" src="./js/main.js" defer></script>
   <title>Air Max || Home</title>
@@ -16,22 +16,23 @@
         <span class="burger-menu__line"></span>
         <span class="burger-menu__line"></span>
       </button>
+      <div class="header__left-column"></div>
       <nav class="header__nav" aria-label="categories">
         <ul class="header__list overlay list" data-js-overlay>
           <li class="list__item">
-            <a href="/" class="list__link is-active">ALL</a>
+            <a href="#all-sections" class="list__link is-active" aria-current="page" data-js-nav-item>ALL</a>
           </li>
           <li class="list__item">
-            <a href="/" class="list__link">FOOTWEAR</a>
+            <a href="#footwear-slider" class="list__link" data-js-nav-item>FOOTWEAR</a>
           </li>
           <li class="list__item">
-            <a href="/" class="list__link">APPAREL</a>
+            <a href="#apparel" class="list__link" data-js-nav-item>APPAREL</a>
           </li>
           <li class="list__item">
-            <a href="/" class="list__link">BASKETBALL</a>
+            <a href="#basketball-banner" class="list__link" data-js-nav-item>BASKETBALL</a>
           </li>
           <li class="list__item">
-            <a href="/" class="list__link">SLIDES</a>
+            <a href="#footwear-slides" class="list__link" data-js-nav-item>SLIDES</a>
           </li>
         </ul>
       </nav>
@@ -48,10 +49,10 @@
   </header>
 
   <main class="main">
-    <section class="hero">
+    <section class="hero" id="all-sections">
       <h1 class="visually-hidden">AIR MAX</h1>
       <div class="hero__main container">
-        <img src="./Images/sneakers_logo.png" 
+        <img src="./Images/sneakers_logo.avif" 
         alt="sneakers logo" 
         class="hero__image"
         width="733" height="767"
@@ -60,7 +61,7 @@
       </div>
     </section>
 
-    <section class="section section-slider" data-js-slider-section>
+    <section class="section section-slider" data-js-slider-section id="footwear-slider">
       <header class="section__header container">
         <h2 class="section__title">Top Sellers</h2>
         <div class="section__controls">
@@ -89,23 +90,24 @@
         </div>
       </header>
       <div 
-      class="section__body sellers-slider container" 
+      class="section__body container">
+      <div class="sellers-slider"
       role="region" aria-roledescription="slider" aria-label="Products galery">
-        <button type="button" 
-        class="sellers-slider__arrow slider-arrows slider-arrows__previews" 
-        aria-label="button-previews" data-js-arrow-prev>
-          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
-          </svg>
-        </button>
-        <button type="button"
-        class="sellers-slider__arrow slider-arrows slider-arrows__next" 
-        aria-label="button-next" data-js-arrow-next>
-          <svg width="58" height="58" style="rotate: 180deg;" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
-          </svg>
-        </button>
-        <ul 
+      <button type="button" 
+      class="sellers-slider__arrow slider-arrows slider-arrows__previews" 
+      aria-label="button-previews" data-js-arrow-prev>
+        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
+        </svg>
+      </button>
+      <button type="button"
+      class="sellers-slider__arrow slider-arrows slider-arrows__next" 
+      aria-label="button-next" data-js-arrow-next>
+        <svg width="58" height="58" style="rotate: 180deg;" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.241 26.9409C17.977 27.2167 17.77 27.5419 17.632 27.8979C17.3419 28.6039 17.3419 29.3959 17.632 30.1019C17.77 30.4579 17.977 30.7831 18.241 31.0589L26.941 39.7589C27.4871 40.305 28.2277 40.6118 29 40.6118C29.7723 40.6118 30.5129 40.305 31.059 39.7589C31.6051 39.2128 31.9119 38.4722 31.9119 37.6999C31.9119 36.9276 31.6051 36.187 31.059 35.6409L27.289 31.8999H37.7C38.4691 31.8999 39.2067 31.5944 39.7506 31.0505C40.2945 30.5066 40.6 29.769 40.6 28.9999C40.6 28.2308 40.2945 27.4931 39.7506 26.9493C39.2067 26.4054 38.4691 26.0999 37.7 26.0999H27.289L31.059 22.3589C31.3308 22.0893 31.5465 21.7686 31.6938 21.4152C31.841 21.0618 31.9168 20.6827 31.9168 20.2999C31.9168 19.9171 31.841 19.538 31.6938 19.1846C31.5465 18.8312 31.3308 18.5105 31.059 18.2409C30.7894 17.9691 30.4687 17.7533 30.1153 17.6061C29.7619 17.4589 29.3828 17.3831 29 17.3831C28.6172 17.3831 28.2381 17.4589 27.8847 17.6061C27.5313 17.7533 27.2106 17.9691 26.941 18.2409L18.241 26.9409ZM0 28.9999C0 34.7355 1.70082 40.3424 4.88738 45.1114C8.07394 49.8805 12.6031 53.5975 17.9022 55.7924C23.2012 57.9874 29.0322 58.5616 34.6576 57.4427C40.2831 56.3237 45.4504 53.5617 49.5061 49.506C53.5618 45.4503 56.3238 40.283 57.4428 34.6575C58.5617 29.0321 57.9874 23.2011 55.7925 17.9021C53.5976 12.603 49.8805 8.07382 45.1115 4.88726C40.3425 1.7007 34.7356 -0.00012207 29 -0.00012207C25.1917 -0.00012207 21.4206 0.749986 17.9022 2.20737C14.3837 3.66476 11.1868 5.80088 8.4939 8.49378C3.05535 13.9323 0 21.3086 0 28.9999ZM52.2 28.9999C52.2 33.5884 50.8393 38.0739 48.2901 41.8891C45.7408 45.7043 42.1175 48.6779 37.8782 50.4339C33.639 52.1899 28.9743 52.6493 24.4739 51.7541C19.9735 50.8589 15.8397 48.6494 12.5951 45.4048C9.35054 42.1602 7.14096 38.0263 6.24578 33.526C5.3506 29.0256 5.81004 24.3609 7.56599 20.1216C9.32195 15.8824 12.2955 12.259 16.1108 9.70979C19.926 7.16054 24.4115 5.79988 29 5.79988C35.153 5.79988 41.054 8.24416 45.4049 12.595C49.7557 16.9459 52.2 22.8469 52.2 28.9999Z" fill="#808080" />
+        </svg>
+      </button>
+      <ul 
           class="section__list"
           aria-live="polite"
           aria-label="Products list" 
@@ -117,7 +119,7 @@
               class="card__image"
               src="./Images/sneakers_products/orange-sneackers.png" 
               alt="Orange sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -133,7 +135,7 @@
               class="card__image"
               src="./Images/sneakers_products/green-sneackers.png" 
               alt="Green sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -149,7 +151,7 @@
               class="card__image"
               src="./Images/sneakers_products/blue-sneakers.png" 
               alt="Blue sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -165,7 +167,7 @@
               class="card__image"
               src="./Images/sneakers_products/black-sneackers.png" 
               alt="Black Balance sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">New Balance</p>
@@ -181,7 +183,7 @@
               class="card__image"
               src="./Images/sneakers_products/orange-sneackers.png" 
               alt="Orange sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -197,7 +199,7 @@
               class="card__image"
               src="./Images/sneakers_products/green-sneackers.png" 
               alt="Green sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -213,7 +215,7 @@
               class="card__image"
               src="./Images/sneakers_products/blue-sneakers.png" 
               alt="Blue sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">Nike</p>
@@ -229,7 +231,7 @@
               class="card__image"
               src="./Images/sneakers_products/black-sneackers.png" 
               alt="Black Balance sneakers"
-              width="401" height="376" loading="lazy" 
+              loading="lazy" 
               >
               <div class="card__info">
                 <p class="card__brand">New Balance</p>
@@ -241,45 +243,46 @@
           </li>
         </ul>
       </div>
-      <button class="section__button button-buy">SEE ALL</button>
+      </div>
+      <button type="button" class="section__button button-buy">SEE ALL</button>
     </section>
 
-    <section class="perfomants">
-      <h2 class="visually-hidden">Perfomants footwear brands</h2>
-      <div class="perfomants__inner container">
-        <h3 class="perfomants__title">
+    <section class="performants" id="apparel">
+      <h2 class="visually-hidden">performants footwear brands</h2>
+      <div class="performants__inner container">
+        <h3 class="performants__title">
           Not
-          <span class="perfomants__title-block">
+          <span class="performants__title-block">
           </span>
           Just for
-          <span class="perfomants__title-block">
+          <span class="performants__title-block">
           </span><br>
           Street Anymore
-          <span class="perfomants__title-block">
+          <span class="performants__title-block">
           </span>
         </h3>
-        <ul class="perfomants__brands-list" aria-label="Perfomants brands list">
-          <li class="perfomants__item">
-            <img src="./Images/perfomentses/brands/nike.png" alt="Nike"
-            class="perfomants__image"
+        <ul class="performants__brands-list" aria-label="performants brands list">
+          <li class="performants__item">
+            <img src="./Images/performantses/brands/nike.png" alt="Nike"
+            class="performants__image"
             width="170" height="60" loading="lazy"
             >
           </li>
-          <li class="perfomants__item">
-            <img src="./Images/perfomentses/brands/adidas.png" alt="adidas"
-            class="perfomants__image"
+          <li class="performants__item">
+            <img src="./Images/performantses/brands/adidas.png" alt="adidas"
+            class="performants__image"
             width="170" height="96" loading="lazy"
             >
           </li>
-          <li class="perfomants__item">
-            <img src="./Images/perfomentses/brands/vans.png" alt="Vans"
-            class="perfomants__image"
+          <li class="performants__item">
+            <img src="./Images/performantses/brands/vans.png" alt="Vans"
+            class="performants__image"
             width="170" height="90" loading="lazy"
             >
           </li>
-          <li class="perfomants__item">
-            <img src="./Images/perfomentses/brands/nbalance.png" alt="New-balance"
-            class="perfomants__image"
+          <li class="performants__item">
+            <img src="./Images/performantses/brands/nbalance.png" alt="New-balance"
+            class="performants__image"
             width="170" height="96" loading="lazy"
             >
           </li>
@@ -287,15 +290,15 @@
       </div>
     </section>
 
-    <section class="just">
+    <section class="just" id="basketball-banner">
       <div class="just__inner no-padding__container">
         <div class="just__nav animation-banner">
-          <img src="./Images/naike-bar.png" alt="" class="animation-banner__image" loading="lazy">
-          <img src="./Images/naike-bar.png" alt="" class="animation-banner__image" loading="lazy">
+          <img src="./Images/nike-bar.png" alt="" class="animation-banner__image" loading="lazy">
+          <img src="./Images/nike-bar.png" alt="" class="animation-banner__image" loading="lazy">
         </div>
 
         <div class="just__main">
-          <img src="./Images/just__banner.jpg" alt="Style Banner" class="just__banner"
+          <img src="./Images/just__banner.avif" alt="Style Banner" class="just__banner"
           loading="lazy"
           >
           <img src="./Images/white-nike__logo.png" alt="" class="just__logo"
@@ -305,7 +308,7 @@
       </div>
     </section>
 
-    <section class="section section__gallery">
+    <section class="section section__gallery" id="footwear-slides">
       <header class="section__header container">
         <h2 class="section__title">Top Sellers</h2>
         <div class="section__controls">
@@ -436,7 +439,7 @@
           </li>
         </ul>
       </div>
-      <button class="section__button button-buy">SEE ALL</button>
+      <button type="button" class="section__button button-buy">SEE ALL</button>
     </section>
   </main>
 

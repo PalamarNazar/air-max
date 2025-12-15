@@ -9,6 +9,7 @@ class Slider {
 
     constructor() {
         this.sliderSection = document.querySelector(this.selectors.root);
+        if(!this.sliderSection) return;
         this.arrowPrev = this.sliderSection.querySelector(this.selectors.arrowPrev);
         this.arrowNext = this.sliderSection.querySelector(this.selectors.arrowNext);
         this.sliderElement = this.sliderSection.querySelector(this.selectors.slider);
@@ -21,27 +22,53 @@ class Slider {
     bindEvents() {
         this.arrowNext.addEventListener('click', () => this.showSlide(this.index + 1))
         this.arrowPrev.addEventListener('click', () => this.showSlide(this.index - 1))
+        window.addEventListener('keydown', (event) => {
+            if(event.code === 'ArrowLeft' || event.code === 'ArrowRight') {
+                this.onkeydown(event)
+            };
+        })
+    }
+
+    onkeydown(event) {
+        const { code } = event
+
+        if (code === 'ArrowLeft') {
+            this.showSlide(this.index - 1)
+        } else if (code === 'ArrowRight') {
+            this.showSlide(this.index + 1)
+        }
     }
 
     showSlide(index) {
-        const containerWidth = this.sliderSection.clientWidth > 1600 
-        ? 1600 
+        const containerWidth = this.sliderSection.clientWidth > this.globalContainerWidth()
+        ? this.globalContainerWidth()
         : this.sliderSection.clientWidth;
-
-        const sliderItemWidth = this.sliderItemElement[0].clientWidth > 350
-        ?  350 
-        : this.sliderItemElement[0].clientWidth;
         
-        const slideGap = parseFloat(getComputedStyle(this.sliderElement).getPropertyValue('column-gap')) || 0;
+        const sliderItemWidth = this.sliderItemElement[0].clientWidth
+        
+        const slideGap = parseInt(getComputedStyle(this.sliderElement).getPropertyValue('column-gap')) || 0;
 
-        const itemsPerView = Math.floor((containerWidth + slideGap) 
-        / (sliderItemWidth + slideGap));
+        const itemsPerView = this.getItemPerView(containerWidth, slideGap, sliderItemWidth)
 
         const maxIndex = this.sliderItemElement.length - itemsPerView
-
+        
         this.calculateIndex(index, maxIndex)
 
         this.sliderElement.style.transform = `translateX(-${this.index * (sliderItemWidth + slideGap)}px)`;
+    }
+
+    globalContainerWidth() {
+        const rootStyle = window.getComputedStyle(document.body);
+        const globalStyles = rootStyle.getPropertyValue('--container-width');
+
+        const remToPixel = 16;
+
+        return parseInt(globalStyles) * remToPixel  
+    }
+
+    getItemPerView(containerWidth, slideGap, sliderItemWidth) {
+        return Math.floor((containerWidth + slideGap) 
+        / (sliderItemWidth + slideGap));
     }
 
     calculateIndex(index, maxIndex) {

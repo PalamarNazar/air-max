@@ -9,7 +9,8 @@
         content: "AIR MAX";
         @include abs-center;
         z-index: 0;
-        @include fluid-text(382, 85);
+        @include fluid-text(348, 76);
+        letter-spacing: -0.07em;
         white-space: nowrap;
         color: var(--color-opacity);
 
@@ -20,6 +21,7 @@
         grid-template-columns: 50% 25%;
         justify-content: end;
         align-items: end;
+        position: relative;
         padding-block: fluid(20, 10) fluid(62, 34);
 
         @include mobile-s {
@@ -29,6 +31,20 @@
 
         & * {
             z-index: 5;
+        }
+
+        &::before {
+            --frameWidth: #{fluid(538, 170)};
+            --frameHeight: #{fluid(519, 158)};
+            
+            content: "";
+            position: absolute;
+            top: 5%;
+            left: 20%;
+            width: var( --frameWidth);
+            height: var(--frameHeight);
+            background: url(../Images/Frame-hero.svg) center / contain no-repeat;
+
         }
     }
 

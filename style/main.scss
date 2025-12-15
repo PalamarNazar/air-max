@@ -19,16 +19,10 @@
 @use 'blocks/button';
 @use 'blocks/icon';
 
-@use 'blocks/perfomants';
+@use 'blocks/performants';
 
 @use 'blocks/animation-banner';
 @use 'blocks/just';
 
 
 @use 'blocks/footer';
-
-.hero,
-.section-slider {
-    display: none;
-
-}

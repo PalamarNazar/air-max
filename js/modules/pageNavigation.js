@@ -1,53 +1,51 @@
+import HeaderMenu from "./burger.js";
 
-class pageNavigation {
-    selectors = {
-       root: '[data-js-header]',
-       navigationItem: '[data-js-nav-item]',
-       burger: '[data-js-burger]',
-       overlay: '[data-js-overlay]',
+class pageNavigation extends HeaderMenu {
+    navigationSelectors = {
+        navigationItem: '[data-js-nav-item]',
+        ...this.selectors,
     }
-
-    stateClasses = {
-        isActive: 'is-active',
-        isLock: 'is-lock',
-    }
-
     constructor() {
-        this.headerPage = document.querySelector(this.selectors.root);
-        this.burgerButton = this.headerPage.querySelector(this.selectors.burger);
-        this.navigationLinks = this.headerPage.querySelectorAll(this.selectors.navigationItem);
-        this.navigationList = this.headerPage.querySelector(this.selectors.overlay);
-        this.bindEvents();
+        super()
+        this.navigationLinks = this.root.querySelectorAll(this.navigationSelectors.navigationItem);
+        this.bindNavigationEvent();
     }
 
-    bindEvents() {
-        this.navigationList.addEventListener('click', this.onListClick.bind(this))
+    bindNavigationEvent() {
+        this.navigationMenu.addEventListener('click', this.onListClick.bind(this))
     }
 
     onListClick(event) {
-        console.log()
-        const navItem = event.target.closest(this.selectors.navigationItem);
-        const windowWidth = window.matchMedia(`(max-width: ${767.98 / 16}rem)`)
+        const navItem = event.target.closest(this.navigationSelectors.navigationItem);
+        
+        if (!navItem) return;
 
+        const menuIsActive = this.navigationMenu
+        .classList
+        .contains(this.stateClasses.isActive);
 
-        if(!windowWidth.matches) {
+        if(!menuIsActive) {
             this.switchItem(navItem)
         } else {
             this.onMobile(navItem);
         }
+
+
     }
     
     onMobile(navItem) {
-        this.burgerButton.classList.toggle(this.stateClasses.isActive);
-        this.navigationList.classList.toggle(this.stateClasses.isActive);
-        document.querySelector('html').classList.toggle(this.stateClasses.isLock)
+        this.closeMenu();
         this.switchItem(navItem)
     }
 
-    switchItem(item) {
-        if (!item) return;
+    closeMenu() {
+        this.burgerButton.classList.remove(this.stateClasses.isActive);
+        this.navigationMenu.classList.remove(this.stateClasses.isActive);
+        document.documentElement.classList.remove(this.stateClasses.isLock)
 
-    
+    }
+
+    switchItem(item) {
         this.navigationLinks.forEach((link) => link.classList.remove(this.stateClasses.isActive));
 
         item.classList.toggle(this.stateClasses.isActive);

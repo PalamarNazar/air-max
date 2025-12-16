@@ -2,7 +2,6 @@
 
 .sellers-slider {
     --slideGap: #{fluid(26, 10)};
-    position: relative;
     overflow: hidden;
 
     & .section__list {

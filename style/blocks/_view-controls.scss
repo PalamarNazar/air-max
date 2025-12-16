@@ -4,11 +4,13 @@
     display: flex;
     border: var(--button-border);
     padding-inline: fluid(20, 14);
+    width: fit-content;
     
     &__item {
         display: flex;
         align-items: center;
-        height: 100%;
+        padding-block: fluid(13, 4);
+        
 
         &:not(:last-child) {
             padding-right: fluid(13, 6);
@@ -24,7 +26,11 @@
         background-color: transparent;
         border: none;
         padding: 0;
-        
         width: fluid(19, 15);
+
+        @include hover {
+            outline: 2px dashed var(--color-dark);
+            outline-offset: rem(3);
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 .slider-arrows {
     --arrowSize: #{rem(58)};
-    --arrowPointerSize: #{calc(var(--container-padding-x) + #{rem(58)} - 1em)};
+    --arrowPointerSize: #{calc(var(--container-padding-x) + var(--arrowSize) - 1em)};
 
     display: flex;
     position: absolute;

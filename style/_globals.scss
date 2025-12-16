@@ -2,6 +2,8 @@
 
 
 html {
+    // fluid(88, 70) is the header heigth
+    scroll-padding-top: fluid(88, 70);
     &.is-lock {
         overflow: hidden;
     }
@@ -37,10 +39,10 @@ h6, .h6 {
     color: var(--color-red);
 }
 h1, .h1 {
-    @include fluid-text(52, 36);
+    @include fluid-text(52, 32);
 }
 h2, .h2 {
-    @include fluid-text(37, 26);
+    @include fluid-text(37, 24);
     line-height: 1.07;
 }
 h3, .h3 {

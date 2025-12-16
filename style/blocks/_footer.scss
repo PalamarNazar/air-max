@@ -8,8 +8,12 @@
         column-gap: fluid(130, 40);
         padding: fluid(108, 72) 0 fluid(112, 76);
         
-        @include mobile-s-above {
+        @include mobile-above {
             justify-content: flex-end;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            row-gap: rem(20);
         }
     }
 

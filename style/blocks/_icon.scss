@@ -4,22 +4,4 @@
     display: inline-flex;
     align-items: center;
     column-gap: rem(5);
-    &--filters {
-        &::before {
-            content: "";
-            display: flex;
-            background: url(../icons/filter.svg) center no-repeat;
-            @include square(#{fluid(26, 16)});
-        }
-    }
-    &--sort {
-        &::before {
-            content: "";
-            display: flex;
-            background: url(../icons/sort.svg) center no-repeat;
-            @include square(#{fluid(26, 16)});
-        }
-    }
-
-
 }

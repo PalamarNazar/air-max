@@ -3,9 +3,21 @@
 .button {
     display: flex;
     background-color: transparent;
+    align-items: center;
     border: var(--button-border);
     padding: fluid(13, 4) fluid(20, 8) ;
     color: var(--color-dark-gray);
-    font-size: rem(15);
+    @include fluid-text(15, 12);
     white-space: nowrap;
+
+    @include hover {
+        color: var(--color-dark);
+        border-color: var(--color-dark);
+
+        & svg {
+            fill: var(--color-dark);
+        }
+    }
+
+    
 }

@@ -1,16 +1,18 @@
 @use "../helpers" as *;
 
 .section {
-    padding-block: fluid(84, 35) fluid(110, 67);
+    padding-block: fluid(84, 58) fluid(110, 67);
 
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+
+        @include mobile-above {
+            align-items: center;
+        }
         
         @include mobile {
             flex-direction: column;
-            align-items: start;
             row-gap: rem(15);
         }
     }
@@ -23,9 +25,16 @@
     &__controls {
         display: flex;
         column-gap: fluid(30, 10);
+        width: fit-content;
+
+        @include mobile {   
+            flex-wrap: wrap;
+            row-gap: rem(10);
+        }
     }
 
     &__body {
+        position: relative;
         margin-block: fluid(23, 13) fluid(76, 46);
 
         &:has(.gallery__list) {

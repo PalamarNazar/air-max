@@ -9,11 +9,17 @@
     }
     
     &__main {
-        height: fit-content;
         position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: fluid(960, 600);
     }
-
+    
     &__banner {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url(../Images/just__banner.avif) center / cover no-repeat;
         filter: blur(rem(4.5));
     }
 

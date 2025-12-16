@@ -45,9 +45,14 @@
             @include hide;
             translate: -100%;
 
+
             &.is-active {
                 @include show;
                 translate: 0;
+
+                :focus-visible {
+                    outline: rem(2) dashed var(--color-yellow);
+                }
             }
         }
     }
@@ -68,7 +73,7 @@
     &__search {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-self: end;
         background-color: transparent;
         border: none;
         column-gap: fluid(10, 4);

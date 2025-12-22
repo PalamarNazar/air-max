@@ -36,18 +36,28 @@
     &__body {
         position: relative;
         margin-block: fluid(23, 13) fluid(76, 46);
-
-        &:has(.gallery__list) {
-            margin-block: fluid(87, 45) fluid(35, 17);
-        }
-
+        
+        & .section__list,
         & .gallery__list {
             display: grid;
             justify-self: center;
-            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             row-gap: fluid(92, 46);
             column-gap: fluid(40, 15);
+
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+            
+        }
+
+        & .gallery__list {
             position: relative;
+            margin-block: fluid(87, 45) fluid(35, 17);
 
             &::before {
                 content: "";
@@ -56,14 +66,6 @@
                 height: 50%;
                 bottom: 0;
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);
-            }
-
-            @include tablet {
-                grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-            }
-
-            @include mobile {
-                grid-template-columns: 1fr;
             }
         }
     }

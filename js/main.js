@@ -1,5 +1,5 @@
-import Slider from "./modules/slider.js";
 import pageNavigation from "./modules/pageNavigation.js";
+import SwitchView from "./modules/switchView.js";
 
-new Slider();
 new pageNavigation();
+new SwitchView();

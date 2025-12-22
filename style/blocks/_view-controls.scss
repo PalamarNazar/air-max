@@ -10,8 +10,14 @@
         display: flex;
         align-items: center;
         padding-block: fluid(13, 4);
+        transition-duration: var(--transition-duration);
         
-
+        & .is-active {
+            transform: scale(1.15);
+            color: var(--color-red);
+            pointer-events: none;
+        }
+        
         &:not(:last-child) {
             padding-right: fluid(13, 6);
             border-right: var(--button-border);
@@ -19,6 +25,7 @@
         &:not(:first-child) {
             padding-left: fluid(13, 6);
         }
+        
     }
     
     &__button {
@@ -27,7 +34,7 @@
         border: none;
         padding: 0;
         width: fluid(19, 15);
-
+        
         @include hover {
             outline: 2px dashed var(--color-dark);
             outline-offset: rem(3);

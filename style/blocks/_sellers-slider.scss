@@ -4,7 +4,7 @@
     --slideGap: #{fluid(26, 10)};
     overflow: hidden;
 
-    & .section__list {
+    & .slider__list {
         display: flex;
         column-gap: var(--slideGap);
         transition-duration: var(--transition-duration);

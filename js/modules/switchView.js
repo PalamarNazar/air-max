@@ -24,12 +24,9 @@ class SwitchView extends ControlsExtensions {
         this.changeActive(viewControls, clickButton)
         
         if (clickButton.matches(this.selectors.viewList)) {
-            this.destroy()
             this.onChangeList(viewControls);
         }
         else if (clickButton.matches(this.selectors.viewSlider)) {
-            this.destroy()
-            this.slider = new Slider();
             this.sessionCache(viewControls)
             this.onBackView(viewControls);
             
@@ -45,6 +42,8 @@ class SwitchView extends ControlsExtensions {
 
         if(mode === 'slider') {
             thisField.className = this.stateClasses.sliderList
+            this.destroy()
+            this.slider = new Slider();
             this.hideSliderArrows(thisSection, 'block')
         }
         else {
@@ -75,6 +74,7 @@ class SwitchView extends ControlsExtensions {
         
         if(thisSection.classList.contains('section-slider')) {
             this.hideSliderArrows(thisSection, 'none')
+            this.destroy()
         }
     }
     

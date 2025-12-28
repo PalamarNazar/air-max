@@ -6,7 +6,7 @@ class Slider {
         slider: '[data-js-slider]',
         sliderItem: '[data-js-slider-item]',
     }
-
+    
     constructor() {
         this.sliderSection = document.querySelector(this.selectors.root);
         if(!this.sliderSection) return;
@@ -15,27 +15,28 @@ class Slider {
         this.sliderElement = this.sliderSection.querySelector(this.selectors.slider);
         this.sliderItemElement = this.sliderSection.querySelectorAll(this.selectors.sliderItem);
         this.index = 0;
+        this.onkeydown = this.onkeydown.bind(this);
 
-        this.bindEvents();
+        this.bindEvents()
     }
 
     bindEvents() {
-        this.arrowNext.addEventListener('click', () => this.showSlide(this.index + 1))
-        this.arrowPrev.addEventListener('click', () => this.showSlide(this.index - 1))
-        window.addEventListener('keydown', (event) => {
-            if(event.code === 'ArrowLeft' || event.code === 'ArrowRight') {
-                this.onkeydown(event)
-            };
-        })
+        if(this.arrowNext || this.arrowPrev) {
+            this.arrowNext.addEventListener('click', () => this.showSlide(this.index + 1))
+            this.arrowPrev.addEventListener('click', () => this.showSlide(this.index - 1))
+        };
+        document.addEventListener('keydown', this.onkeydown)
     }
 
     onkeydown(event) {
         const { code } = event
-
-        if (code === 'ArrowLeft') {
-            this.showSlide(this.index - 1)
-        } else if (code === 'ArrowRight') {
-            this.showSlide(this.index + 1)
+        if(code === 'ArrowLeft' || code === 'ArrowRight') {
+    
+                if (code === 'ArrowLeft') {
+                    this.showSlide(this.index - 1)
+                } else if (code === 'ArrowRight') {
+                    this.showSlide(this.index + 1)
+                }
         }
     }
 
@@ -81,6 +82,11 @@ class Slider {
         }
 
         return this.index;
+    }
+
+    destroy() {
+        this.sliderElement.style.transform = 'translateX(0)'
+        document.removeEventListener('keydown', this.onkeydown)
     }
 }
 

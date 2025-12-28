@@ -564,16 +564,26 @@ a[class] {
   position: relative;
   margin-block: clamp(0.8125rem, 0.611053719rem + 0.826446281vw, 1.4375rem) clamp(2.875rem, 2.270661157rem + 2.479338843vw, 4.75rem);
 }
-.section__body:has(.gallery__list) {
-  margin-block: clamp(2.8125rem, 1.9664256198rem + 3.4710743802vw, 5.4375rem) clamp(1.0625rem, 0.6998966942rem + 1.4876033058vw, 2.1875rem);
-}
-.section__body .gallery__list {
+.section__body .section__list, .section__body .gallery__list {
   display: grid;
   justify-self: center;
-  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: clamp(2.875rem, 1.9483471074rem + 3.8016528926vw, 5.75rem);
   column-gap: clamp(0.9375rem, 0.4338842975rem + 2.0661157025vw, 2.5rem);
+}
+@media (width <= 63.99875rem) {
+  .section__body .section__list, .section__body .gallery__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 47.99875rem) {
+  .section__body .section__list, .section__body .gallery__list {
+    grid-template-columns: 1fr;
+  }
+}
+.section__body .gallery__list {
   position: relative;
+  margin-block: clamp(2.8125rem, 1.9664256198rem + 3.4710743802vw, 5.4375rem) clamp(1.0625rem, 0.6998966942rem + 1.4876033058vw, 2.1875rem);
 }
 .section__body .gallery__list::before {
   content: "";
@@ -582,16 +592,6 @@ a[class] {
   height: 50%;
   bottom: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);
-}
-@media (width <= 63.99875rem) {
-  .section__body .gallery__list {
-    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
-  }
-}
-@media (width <= 47.99875rem) {
-  .section__body .gallery__list {
-    grid-template-columns: 1fr;
-  }
 }
 .section__button {
   display: flex;
@@ -610,6 +610,12 @@ a[class] {
   display: flex;
   align-items: center;
   padding-block: clamp(0.25rem, 0.0686983471rem + 0.7438016529vw, 0.8125rem);
+  transition-duration: var(--transition-duration);
+}
+.view-controls__item .is-active {
+  transform: scale(1.15);
+  color: var(--color-red);
+  pointer-events: none;
 }
 .view-controls__item:not(:last-child) {
   padding-right: clamp(0.375rem, 0.2339876033rem + 0.5785123967vw, 0.8125rem);
@@ -642,7 +648,7 @@ a[class] {
   --slideGap: clamp(0.625rem, 0.3026859504rem + 1.3223140496vw, 1.625rem);
   overflow: hidden;
 }
-.sellers-slider .section__list {
+.sellers-slider .slider__list {
   display: flex;
   column-gap: var(--slideGap);
   transition-duration: var(--transition-duration);
